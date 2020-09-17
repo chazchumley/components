@@ -131,7 +131,7 @@ We should now be able to access Pattern Lab ny navigating to `https://components
 ## Congratulations
 We now have a Drupal 9 project with the `Ohana` theme enabled that we will be using throughout the remaining training. This Drupal 9 instance is configured with the latest best practices in mind for site building. This includes use of  Media, Paragraphs, various Twig modules and the Component libraries modules.
 
-- Drupal 9 URL: `https://components.lndo.site`
-- Pattern Lab URL: `https://components.lndo.site:3000`
+- Drupal 9 URL: `https://components.ddev.site`
+- Pattern Lab URL: `https://components.ddev.site:3000`
 
 This training does not cover site building but we will briefly discuss various decision made when implementing a component-based theme using Twig and Pattern Lab.
