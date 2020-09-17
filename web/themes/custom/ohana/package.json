@@ -28,6 +28,7 @@
     "lint": "gulp lint",
     "clean": "gulp clean",
     "gulp": "gulp",
+    "preinstall": "npx npm-force-resolutions",
     "generate": "yo ohana:component"
   },
   "babel": {
