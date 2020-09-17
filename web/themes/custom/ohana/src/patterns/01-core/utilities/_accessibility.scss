@@ -1,0 +1,24 @@
+// @file
+// Utility classes for Accessibility
+
+@use '../mixins/accessiblity' as *;
+
+// Accessibility utility classes
+.visually-hidden {
+  @include visually-hidden(true);
+
+  &.focusable {
+    &:focus,
+    &:active {
+      @include visually-hidden-off(true);
+    }
+  }
+}
+
+.hidden {
+  @include hidden(true);
+}
+
+.invisible {
+  @include invisible(true);
+}

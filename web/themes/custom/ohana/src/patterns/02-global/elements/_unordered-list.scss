@@ -1,0 +1,15 @@
+// @file
+// Unordered list styles.
+
+@use '../../01-core/functions' as *;
+
+ul {
+  list-style-type: disc;
+  margin: 0 0 units(2);
+  padding: 0 0 0 units(3);
+
+  ol,
+  ul {
+    margin-top: units(1);
+  }
+}

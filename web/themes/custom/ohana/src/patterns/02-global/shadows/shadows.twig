@@ -1,0 +1,20 @@
+{#
+ * @file
+ * Display for theme box shadows.
+ *
+ * Each box shadow is populated from the yml file within
+ * this same directory (shadows.yml). Add or remove any fonts there.
+ *
+#}
+
+<div class="pl-box-shadow">
+  {% for elevation, shadow in shadows %}
+    {% set box_style = 'box-shadow: '~ shadow ~';' %}
+    <div class="pl-box-shadow__item" style="{{ box_style }}">
+      <div class="pl-box-shadow__label">
+        Elevation Level
+        {{ elevation }}
+      </div>
+    </div>
+  {% endfor %}
+</div>

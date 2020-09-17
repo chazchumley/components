@@ -1,0 +1,4 @@
+---
+el: .date
+title: Date
+---

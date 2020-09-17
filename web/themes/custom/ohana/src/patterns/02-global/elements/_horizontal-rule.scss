@@ -1,0 +1,13 @@
+// @file
+// Horizontal rule styles.
+
+@use '../../01-core/functions' as *;
+
+hr {
+  border: 1px solid color(ui, border);
+  box-sizing: content-box;
+  height: 0;
+  margin: units(3) 0;
+  overflow: visible;
+  padding-bottom: -1px;
+}

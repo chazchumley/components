@@ -1,0 +1,11 @@
+---
+modifier: 'list--inline'
+list:
+  -
+    content: 'List Item One'
+  -
+    content: 'List Item Two'
+  -
+    content: 'List Item Three'
+  -
+    content: 'List Item Four'

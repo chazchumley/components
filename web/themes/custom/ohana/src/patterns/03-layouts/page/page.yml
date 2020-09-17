@@ -1,0 +1,7 @@
+---
+header: |-
+  <div><p style="background:#333;color:#fff;padding:1em;margin:0;">Header</p></div>
+main: |-
+  <div><p style="background:#333;color:#fff;padding:1em;margin:0;">Main</p></div>
+footer: |-
+  <div><p style="background:#333;color:#fff;padding:1em;margin:0;">Footer</p></div>

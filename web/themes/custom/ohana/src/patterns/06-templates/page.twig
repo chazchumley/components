@@ -1,0 +1,16 @@
+{% embed '@layouts/sidebar/sidebar.twig' with {
+  'modifier': page_modifier,
+  'constrain': page_constrain,
+  'header': page_header,
+  'aside': page_aside
+} %}
+
+  {% block main %}
+    {% include '@components/page-title/page-title.twig' with {
+      'title': page_title
+    } %}
+
+    {{ page_content }}
+  {% endblock %}
+
+{% endembed %}

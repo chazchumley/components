@@ -1,0 +1,13 @@
+<div class="l-content {{ modifier }}">
+  {% if constrain %}
+    <div class="{{ constrain }}">
+  {% endif %}
+
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+
+  {% if constrain %}
+    </div>
+  {% endif %}
+</div>

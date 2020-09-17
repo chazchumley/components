@@ -1,0 +1,13 @@
+<section class="l-{{ region_name ?: 'region' }}">
+  {% if constrain %}
+    <div class="{{ constrain }}">
+  {% endif %}
+
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+
+  {% if constrain %}
+    </div>
+  {% endif %}
+</section>

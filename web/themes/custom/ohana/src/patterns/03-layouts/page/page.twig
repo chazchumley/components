@@ -1,0 +1,15 @@
+<div class="l-page">
+  {% block header %}
+    {{ header }}
+  {% endblock %}
+
+  <main id="main-content" class="l-main" role="main" tabindex="-1">
+    {% block main %}
+      {{ main }}
+    {% endblock %}
+  </main>
+
+  {% block footer %}
+    {{ footer }}
+  {% endblock %}
+</div>

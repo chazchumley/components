@@ -1,0 +1,14 @@
+// @file
+// Clearfix
+
+@mixin clearfix($important: false) {
+  &::after {
+    clear: both if($important, !important, null);
+    content: '' if($important, !important, null);
+    display: table if($important, !important, null);
+  }
+}
+
+@mixin clearfix-important {
+  @include clearfix(true);
+}

@@ -1,0 +1,14 @@
+<{{ element ?: 'div' }} class="field {{ attributes ? attributes.class }}" {{ attributes ? attributes|without('class') }}>
+  {% if not label_hidden %}
+    <{{ label_element ?: 'h3' }} class="field__label {{ label_display == 'visually_hidden' ? 'visually-hidden' }} {{ title_attributes ? title_attributes.class }}" {{ title_attributes ?  title_attributes|without('class') }}>{{ label }}</{{ label_element ?: 'h3' }}>
+  {% endif %}
+  {% if multiple %}
+    <div class="field__items">
+  {% endif %}
+  {% for item in items %}
+    <div class="field__item {{ item_attributes ? item_attributes.class }}" {{ item_attributes ? item_attributes|without('class') }}>{{ item.content }}</div>
+  {% endfor %}
+  {% if multiple %}
+    </div>
+  {% endif %}
+</{{ element ?: 'div' }}>

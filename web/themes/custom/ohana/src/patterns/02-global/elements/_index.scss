@@ -1,0 +1,56 @@
+@forward 'universal';
+@forward 'html';
+@forward 'body';
+@forward 'main';
+@forward 'section';
+@forward 'article';
+@forward 'header';
+@forward 'footer';
+@forward 'aside';
+@forward 'menu';
+@forward 'nav';
+@forward 'details';
+@forward 'iframe';
+
+// Typography
+@forward 'headings';
+@forward 'paragraph';
+@forward 'inline-elements';
+@forward 'blockquote';
+@forward 'preformatted-text';
+@forward 'horizontal-rule';
+@forward 'address';
+
+// Lists
+@forward 'unordered-list';
+@forward 'ordered-list';
+@forward 'list-item';
+@forward 'definition-list';
+
+// Tables
+@forward 'table';
+
+// Forms
+@forward 'button';
+@forward 'datalist';
+@forward 'fieldset';
+@forward 'form';
+@forward 'input';
+@forward 'label';
+@forward 'legend';
+@forward 'meter';
+@forward 'option';
+@forward 'output';
+@forward 'progress';
+@forward 'select';
+@forward 'textarea';
+
+// Media
+@forward 'audio';
+@forward 'canvas';
+@forward 'embed';
+@forward 'figure';
+@forward 'img';
+@forward 'object';
+@forward 'svg';
+@forward 'video';

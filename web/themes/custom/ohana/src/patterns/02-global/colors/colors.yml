@@ -1,0 +1,19 @@
+---
+colors:
+  brand:
+    blue-60: '#005ea2'
+    blue-70: '#0b4778'
+  shades:
+    light: '#fff'
+    dark: '#000'
+  grayscale:
+    gray-5: '#f0f0f0'
+    gray-10: '#e6e6e6'
+    gray-20: '#c9c9c9'
+    gray-30: '#adadad'
+    gray-40: '#919191'
+    gray-50: '#757575'
+    gray-60: '#5c5c5c'
+    gray-70: '#454545'
+    gray-80: '#2e2e2e'
+    gray-90: '#1b1b1b'

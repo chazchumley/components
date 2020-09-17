@@ -1,0 +1,155 @@
+// @file
+// Inline element styles.
+
+@use '../../variables' as *;
+@use '../../01-core/functions' as *;
+@use '../../01-core/mixins' as *;
+
+a {
+  @include focus;
+  background-color: transparent;
+  color: $link-color;
+  transition-duration: 200ms;
+  transition-property: background-color, border-color, color, outline-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+
+  &:visited {
+    color: $link-color-visited;
+  }
+
+  &:hover,
+  &:focus {
+    color: $link-color-hover;
+  }
+
+  &:active {
+    color: $link-color-active;
+  }
+
+  @media print {
+
+    &,
+    &:visited {
+      text-decoration: none;
+    }
+
+    &[href]::after {
+      content: ' <' attr(href) '>';
+      font-family: font-family(body);
+      font-size: 10pt;
+      font-weight: normal;
+      text-transform: lowercase;
+    }
+
+    // Uncomment and replace example.com with your site’s domain.
+    //&[href^='/']::after {
+    //  content: ' <http://example.com' attr(href) '>';
+    //}
+
+    &[href^='javascript:']::after,
+    &[href^='mailto:']::after,
+    &[href^='tel:']::after,
+    &[href^='#']::after,
+    &[href*='?']::after {
+      content: '';
+    }
+  }
+}
+
+abbr {
+  &[title] {
+    border-bottom: 0;
+    text-decoration: underline dotted;
+  }
+
+  &:hover {
+    cursor: help;
+  }
+
+  @media print {
+
+    &[title]::after {
+      content: ' (' attr(title) ')';
+    }
+  }
+}
+
+b {
+  font-weight: bolder;
+}
+
+cite {
+  color: $cite-color;
+  font-family: font-family(body);
+  font-size: font-size(1);
+  font-style: normal;
+  font-weight: font-weight(semibold);
+  letter-spacing: 0.02em;
+  line-height: line-height(tight);
+}
+
+code {
+  font-family: font-family(mono);
+  font-size: font-size(5);
+}
+
+// del {}
+
+dfn {
+  font-style: italic;
+}
+
+// em {}
+
+// i {}
+
+// ins {}
+
+kbd {
+  font-family: font-family(mono);
+  font-size: font-size(5);
+}
+
+mark {
+  background: $mark-background;
+  color: $mark-color;
+}
+
+// q {}
+
+// s {}
+
+samp {
+  font-family: font-family(mono);
+  font-size: font-size(5);
+}
+
+small {
+  font-size: 75%;
+}
+
+strong {
+  font-weight: bolder;
+}
+
+sub {
+  bottom: -0.25em;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  top: -0.5em;
+  vertical-align: baseline;
+}
+
+// time {}
+
+// u {}
+
+// var {}

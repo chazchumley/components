@@ -1,0 +1,32 @@
+{#
+ * @file
+ * Display for theme spacing.
+ *
+ * Each spacing unit is populated from the yml file within
+ * this same directory (spacing.yml). Add or remove any units there.
+ *
+#}
+
+
+<table class="pl-spacing">
+  <thead>
+    <tr>
+      <th class="pl-spacing__header">Unit</th>
+      <th class="pl-spacing__header">REM</th>
+      <th class="pl-spacing__header">PX</th>
+      <th class="pl-spacing__header">Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in spacing|sort %}
+      <tr>
+        <td class="pl-spacing__cell">{{ item.unit }}</td>
+        <td class="pl-spacing__cell">{{ item.rem }}</td>
+        <td class="pl-spacing__cell">{{ item.px }}</td>
+        <td class="pl-spacing__cell">
+          <div style="height:{{ item.px }}; width:{{ item.px }}; background-color: #ccc;"></div>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

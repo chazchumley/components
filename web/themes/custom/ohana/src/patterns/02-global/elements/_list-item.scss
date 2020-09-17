@@ -1,0 +1,16 @@
+// @file
+// List item styles.
+
+@use '../../01-core/functions' as *;
+
+li {
+  margin-bottom: units(1);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media print {
+    page-break-inside: avoid;
+  }
+}

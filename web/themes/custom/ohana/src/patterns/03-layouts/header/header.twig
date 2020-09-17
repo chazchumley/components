@@ -1,0 +1,13 @@
+<header class="l-header {{ modifier }}" role="banner">
+  {% if constrain %}
+    <div class="{{ constrain }}">
+  {% endif %}
+
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+
+  {% if constrain %}
+    </div>
+  {% endif %}
+</header>

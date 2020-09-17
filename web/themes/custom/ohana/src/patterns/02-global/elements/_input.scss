@@ -1,0 +1,58 @@
+// @file
+// Input element styles.
+
+input {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: normal;
+  margin: 0;
+  overflow: visible;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="search"] {
+  appearance: textfield;
+  outline-offset: -2px;
+}
+
+input[type="search"]::-webkit-search-decoration {
+  appearance: none;
+}
+
+::-webkit-file-upload-button {
+  appearance: button;
+  font: inherit;
+}
+
+// input[type='button'] {}
+// input[type='checkbox'] {}
+// input[type='color'] {}
+// input[type='date'] {}
+// input[type='datetime'] {}
+// input[type='datetime-local'] {}
+// input[type='email'] {}
+// input[type='file'] {}
+// input[type='image'] {}
+// input[type='month'] {}
+// input[type='number'] {}
+// input[type='password'] {}
+// input[type='radio'] {}
+// input[type='range'] {}
+// input[type='reset'] {}
+// input[type='search'] {}
+// input[type='submit'] {}
+// input[type='tel'] {}
+// input[type='text'] {}
+// input[type='time'] {}
+// input[type='url'] {}
+// input[type='week'] {}

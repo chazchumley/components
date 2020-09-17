@@ -1,0 +1,54 @@
+// @file
+// Blockquote styles.
+
+@use '../../variables' as *;
+@use '../../01-core/functions' as *;
+
+blockquote {
+  color: $blockquote-color;
+  font-family: font-family(body);
+  font-size: font-size(10);
+  margin: 0 0 units(5);
+
+  // Add top margin when blockquote is preceded by other elements
+  * + & {
+    margin-top: units(5);
+  }
+
+  p {
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+
+    &::before {
+      content: '\201C';
+    }
+
+    &::after {
+      content: '\201D';
+    }
+  }
+
+  cite {
+    display: block;
+    margin-top: units(2);
+    text-align: right;
+
+    em {
+      border-left: 1px solid color(ui, border);
+      font-weight: font-weight(regular);
+      margin-left: units(0.5);
+      padding-left: units(1);
+    }
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  @media print {
+    page-break-inside: avoid;
+  }
+}

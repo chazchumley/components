@@ -1,0 +1,27 @@
+/// Derive a color from a color token
+///
+/// @param {String} $color - Color family derived from sass map
+/// @param {String} $variant - Color variant derived from sass map
+///
+/// @return {String} - Hexadecimal color value
+
+@use 'sass:map';
+@use '../../00-settings/color' as settings;
+
+@function color($color, $variant) {
+
+  @if not(map.has-key(settings.$colors, $color)) {
+    @error '"#{$color}" is not a valid color in $colors map.';
+  }
+
+  $curr_color: map.get(settings.$colors, $color);
+
+  @if not(map.has-key($curr_color, $variant)) {
+    @error '"#{$variant}" is not a valid variant in $colors map.';
+  }
+
+  @return map.get($curr_color, $variant);
+}
+
+// @debug color("blue", "base");
+// @return #e52207;

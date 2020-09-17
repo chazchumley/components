@@ -1,0 +1,96 @@
+{#
+/**
+ * @file
+ * Theme override to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ */
+#}
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see https://twig.symfony.com/doc/1.x/tags/macro.html
+#}
+{{ menus.menu_links(items, attributes, 0, menu_name, menu_class, item_class, link_class) }}
+
+{% macro menu_links(items, attributes, menu_level, menu_name, menu_class, item_class, link_class) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+
+      {% set menu_classes = [
+        'menu',
+        'menu--' ~ menu_name|clean_class,
+        attributes ? attributes.class
+      ]|join(' ')|trim %}
+
+      <ul class="{{ menu_classes }}" {{ attributes ? attributes|without('class') }}>
+    {% else %}
+      <ul class="menu menu__subnav">
+    {% endif %}
+
+    {% for item in items %}
+
+      {% set item_classes = [
+        'menu__item',
+        item_class ? item_class,
+        item.attributes ? item.attributes.class
+      ] %}
+
+      {% set link_classes = [
+        'menu__link',
+        link_class ? link_class
+      ] %}
+
+      {% if item.below %}
+        {% set item_classes = item_classes|merge(['has-subnav']) %}
+        {% set link_classes = link_classes|merge(['has-subnav']) %}
+      {% endif %}
+
+      {% if item.in_active_trail %}
+        {% set item_classes = item_classes|merge(['is-active-trail']) %}
+        {% set link_classes = link_classes|merge(['is-active-trail']) %}
+      {% endif %}
+
+      {% if item.is_collapsed %}
+        {% set item_classes = item_classes|merge(['is-collapsed']) %}
+        {% set link_classes = link_classes|merge(['is-collapsed']) %}
+      {% endif %}
+
+      {% if item.is_expanded %}
+        {% set item_classes = item_classes|merge(['is-expanded']) %}
+        {% set link_classes = link_classes|merge(['is-expanded']) %}
+      {% endif %}
+
+      {% if item['original_link'].options.attributes.class %}
+        {% set link_classes = link_classes|merge([item['original_link'].options.attributes.class]) %}
+      {% endif %}
+
+      {% set item_classes = item_classes|join(' ')|trim %}
+      {% set link_classes = link_classes|join(' ')|trim %}
+
+      <li class="{{ item_classes }}" {{ item.attributes ? item.attributes|without('class') }}>
+        <a class="{{ link_classes }}" href="{{ item.url }}">{{ item.title }}</a>
+
+        {% if item.below %}
+          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% endif %}
+      </li>
+
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

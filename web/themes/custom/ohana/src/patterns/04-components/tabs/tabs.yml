@@ -1,0 +1,14 @@
+---
+modifier: 'tabs--primary'
+heading: 'Primary Tabs'
+tabs:
+  -
+    text: 'View'
+    url: '#'
+    active: true
+  -
+    text: 'Edit'
+    url: '#'
+  -
+    text: 'Delete'
+    url: '#'

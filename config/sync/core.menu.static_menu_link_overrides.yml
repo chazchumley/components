@@ -1,0 +1,87 @@
+definitions:
+  'admin_toolbar_tools__extra_links:update__theme_install':
+    enabled: false
+    menu_name: admin
+    parent: system.themes_page
+    expanded: false
+    weight: 0
+  'admin_toolbar_tools__extra_links:system__theme_settings':
+    enabled: false
+    menu_name: admin
+    parent: system.themes_page
+    weight: 0
+    expanded: false
+  'admin_toolbar_tools__extra_links:system__theme_settings_theme__claro':
+    enabled: false
+    menu_name: admin
+    parent: 'admin_toolbar_tools.extra_links:system.theme_settings'
+    weight: 0
+    expanded: false
+  'admin_toolbar_tools__extra_links:system__theme_settings_theme__ohana':
+    enabled: false
+    menu_name: admin
+    parent: 'admin_toolbar_tools.extra_links:system.theme_settings'
+    weight: 0
+    expanded: false
+  'admin_toolbar_tools__extra_links:update__theme_update':
+    enabled: false
+    menu_name: admin
+    parent: system.themes_page
+    weight: 0
+    expanded: false
+  'admin_toolbar_tools__extra_links:update__module_install':
+    enabled: false
+    menu_name: admin
+    parent: system.modules_list
+    weight: 0
+    expanded: false
+  system__modules_uninstall:
+    enabled: false
+    menu_name: admin
+    parent: system.modules_list
+    weight: 0
+    expanded: false
+  'admin_toolbar_tools__extra_links:update__module_update':
+    enabled: false
+    menu_name: admin
+    parent: system.modules_list
+    weight: 0
+    expanded: false
+  update__status:
+    enabled: false
+    menu_name: admin
+    parent: system.admin_reports
+    weight: -50
+    expanded: false
+  entity__field_storage_config__collection:
+    enabled: false
+    menu_name: admin
+    parent: system.admin_reports
+    weight: 0
+    expanded: false
+  'admin_toolbar_tools__extra_links:views_ui__field_list':
+    enabled: false
+    menu_name: admin
+    parent: entity.field_storage_config.collection
+    weight: 0
+    expanded: false
+  dblog__access_denied:
+    enabled: false
+    menu_name: admin
+    parent: system.admin_reports
+    weight: 0
+    expanded: false
+  dblog__page_not_found:
+    enabled: false
+    menu_name: admin
+    parent: system.admin_reports
+    weight: 0
+    expanded: false
+  views_ui__reports_plugins:
+    enabled: false
+    menu_name: admin
+    parent: system.admin_reports
+    weight: 0
+    expanded: false
+_core:
+  default_config_hash: jdY7AU0tU-QsjmiOw3W8vwpYMb-By--_MSFgbqKUTYM

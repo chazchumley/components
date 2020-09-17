@@ -1,0 +1,11 @@
+---
+modifier: ''
+constrain: ''
+header: |-
+  <p style="background:#333;color:#fff;padding:1em; margin:0;">Optional Header</p>
+aside: |-
+  <p style="background:#333;color:#fff;padding:1em; margin:0;">Optional Aside</p>
+main: |-
+  <p style="background:#333;color:#fff;padding:1em; margin:0;">Main Content</p>
+footer: |-
+  <p style="background:#333;color:#fff;padding:1em; margin:0;">Optional Footer</p>

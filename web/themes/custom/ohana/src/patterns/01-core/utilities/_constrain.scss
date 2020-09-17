@@ -1,0 +1,13 @@
+// @file
+// Utility classes for constraining the page width.
+
+@use '../mixins/layout' as *;
+
+.l-constrain {
+  @include layout-constrain;
+}
+
+.l-constrain--no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}

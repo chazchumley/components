@@ -1,0 +1,127 @@
+// @file
+// Heading styles.
+
+@use '../../01-core/functions' as *;
+
+%hN {
+  color: inherit;
+  font-weight: font-weight(bold);
+  hyphens: none;
+  line-height: line-height(base);
+  margin: 0 0 units(2);
+  text-rendering: optimizeLegibility;
+
+  @media print {
+    orphans: 3;
+    page-break-after: avoid;
+    widows: 3;
+
+    &::after {
+      display: inline-block;
+    }
+  }
+
+  // Add top margin when headers are preceded by other elements (p, ul, etc.)
+  * + & {
+    margin-top: 1em;
+  }
+}
+
+h1,
+%h1 {
+  @extend %hN;
+  color: color(text, dark);
+  font-family: font-family(heading);
+  font-size: font-size(15);
+  letter-spacing: -1.5px;
+  line-height: line-height(tight);
+
+  a {
+    color: inherit;
+    font-weight: inherit;
+  }
+}
+
+h2,
+%h2 {
+  @extend %hN;
+  color: color(text, dark);
+  font-family: font-family(heading);
+  font-size: font-size(14);
+  letter-spacing: -0.5px;
+  line-height: line-height(tight);
+
+  a {
+    color: inherit;
+    font-weight: inherit;
+  }
+}
+
+h3,
+%h3 {
+  @extend %hN;
+  color: color(text, dark);
+  font-family: font-family(heading);
+  font-size: font-size(12);
+  line-height: line-height(tight);
+
+  a {
+    color: inherit;
+    font-weight: inherit;
+  }
+}
+
+h4,
+%h4 {
+  @extend %hN;
+  color: color(text, dark);
+  font-family: font-family(heading);
+  font-size: font-size(10);
+  letter-spacing: 0.25px;
+
+  a {
+    color: inherit;
+    font-weight: inherit;
+  }
+}
+
+h5,
+%h5 {
+  @extend %hN;
+  color: color(text, dark);
+  font-family: font-family(heading);
+  font-size: font-size(5);
+
+  a {
+    color: inherit;
+    font-weight: inherit;
+  }
+}
+
+h6,
+%h6 {
+  @extend %hN;
+  color: color(text, dark);
+  font-family: font-family(heading);
+  font-size: font-size(1);
+  letter-spacing: 0.15px;
+  line-height: line-height(loose);
+  text-transform: uppercase;
+
+  a {
+    color: inherit;
+    font-weight: inherit;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // Remove top margin for adjacent subheadings.
+  & + & {
+    margin-top: 0;
+  }
+}

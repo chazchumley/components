@@ -1,0 +1,13 @@
+// @file
+// Paragraph styles.
+
+@use '../../01-core/functions' as *;
+
+p {
+  margin: 0 0 units(2);
+
+  @media print {
+    orphans: 3;
+    widows: 3;
+  }
+}

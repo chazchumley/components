@@ -1,0 +1,23 @@
+@use '00-settings/color' as *;
+@use '01-core/functions/' as *;
+
+// Links
+$link-color: color(brand, blue-60) !default;
+$link-color-visited: color(brand, blue-70) !default;
+$link-color-hover: color(brand, blue-70) !default;
+$link-color-active: color(brand, blue-70) !default;
+
+// Inline Elements
+$cite-color: color(grayscale, gray-60) !default;
+$mark-background: color(ui, mark) !default;
+$mark-color: color(shades, dark) !default;
+
+// Blockquote
+$blockquote-color: color(brand, blue-60) !default;
+
+// Button
+
+// Media Query Ranges
+$small-screen: 600px !default;
+$medium-screen: 992px !default;
+$large-screen: 1200px !default;

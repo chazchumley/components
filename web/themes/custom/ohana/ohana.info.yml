@@ -1,0 +1,56 @@
+name: Ohana
+type: theme
+description: 'Pattern Lab based starter theme.'
+package: Core
+core_version_requirement: ^8.8 || ^9
+base theme: stable
+
+libraries:
+  - ohana/global
+
+libraries-override:
+  system/base:
+    css:
+      component:
+        /core/themes/stable/css/system/components/align.module.css: false
+        /core/themes/stable/css/system/components/clearfix.module.css: false
+        /core/themes/stable/css/system/components/container-inline.module.css: false
+        /core/themes/stable/css/system/components/details.module.css: false
+        /core/themes/stable/css/system/components/fieldgroup.module.css: false
+        /core/themes/stable/css/system/components/hidden.module.css: false
+        /core/themes/stable/css/system/components/item-list.module.css: false
+        /core/themes/stable/css/system/components/nowrap.module.css: false
+        /core/themes/stable/css/system/components/position-container.module.css: false
+        /core/themes/stable/css/system/components/progress.module.css: false
+        /core/themes/stable/css/system/components/reset-appearance.module.css: false
+        /core/themes/stable/css/system/components/resize.module.css: false
+
+ckeditor_stylesheets:
+  - https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i&display=swap
+  - dist/css/styles.css
+
+regions:
+  page_top: 'Page top'
+  header: Header
+  help: Help
+  highlighted: Highlighted
+  preface: Preface
+  content: Content
+  postscript: Postscript
+  footer: Footer
+  hidden: Hidden
+  page_bottom: 'Page bottom'
+
+component-libraries:
+  layouts:
+    paths:
+      - src/patterns/03-layouts
+  components:
+    paths:
+      - src/patterns/04-components
+  composites:
+    paths:
+      - src/patterns/05-composites
+  templates:
+    paths:
+      - src/patterns/06-templates

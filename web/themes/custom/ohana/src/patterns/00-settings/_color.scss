@@ -1,0 +1,61 @@
+// ==========================================================================
+// Color maps
+// ==========================================================================
+
+$brand: (
+  blue-60: #005ea2,
+  blue-70: #0b4778
+);
+
+$shades: (
+  dark: #000,
+  light: #fff,
+  transparent: transparent
+);
+
+$grayscale: (
+  gray-5: #f0f0f0,
+  gray-10: #e6e6e6,
+  gray-20: #c9c9c9,
+  gray-30: #adadad,
+  gray-40: #919191,
+  gray-50: #757575,
+  gray-60: #5c5c5c,
+  gray-70: #454545,
+  gray-80: #2e2e2e,
+  gray-90: #1b1b1b
+);
+
+$ui: (
+  border: #adadad,
+  focus: #4773aa,
+  mark: #ff0
+);
+
+$background: (
+  dark: #000,
+  light: #fff,
+  transparent: transparent
+);
+
+$text: (
+  dark: #000,
+  light: #fff
+);
+
+$table: (
+  background: #fff,
+  background-head: #f0f0f0,
+  background-foot: #f0f0f0,
+  border: #5c5c5c
+);
+
+$colors: (
+  brand: $brand,
+  shades: $shades,
+  grayscale: $grayscale,
+  background: $background,
+  text: $text,
+  table: $table,
+  ui: $ui
+) !default;

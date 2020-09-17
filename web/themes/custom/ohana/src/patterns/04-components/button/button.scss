@@ -1,0 +1,57 @@
+// @file
+// Styles for Button.
+
+.button {
+  appearance: none;
+}
+
+// .button {
+//   appearance: none;
+//   background-color: color("primary");
+//   border: 0;
+//   border-radius: radius($theme-button-border-radius);
+//   color: color("white");
+//   cursor: pointer;
+//   display: inline-block;
+//   font-family: font-family(primary);
+//   font-size: rem($font-size);
+//   -moz-osx-font-smoothing: grayscale;
+//   -webkit-font-smoothing: antialiased;
+//   font-weight: font-weight(bold);
+//   line-height: line-height(base);
+//   margin-bottom: units(1);
+//   padding: units(1.5) units(2.5);
+//   text-align: center;
+//   text-decoration: none;
+//   transition: background gesso-duration(short) gesso-easing(ease-in);
+//   vertical-align: top;
+//   white-space: normal;
+
+//   &:visited {
+//     color: $color-text;
+//   }
+
+//   &:hover,
+//   &:focus {
+//     background-color: $color-background-hover;
+//     border-color: $color-border-hover;
+//     color: $color-text-hover;
+//   }
+
+//   &:active {
+//     background-color: $color-background-active;
+//     color: $color-text-active;
+//   }
+
+//   &[disabled] {
+//     background-color: $color-background-disabled;
+//     border-color: $color-border-disabled;
+//     color: $color-text-disabled;
+//     cursor: default;
+//     pointer-events: none;
+//   }
+
+//   & + & {
+//     margin-left: units(1);
+//   }
+// }

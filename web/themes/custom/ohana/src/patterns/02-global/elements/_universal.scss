@@ -1,0 +1,21 @@
+// @file
+// Universal styles.
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@media print {
+  * {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+
+  @page {
+    margin: 2cm;
+  }
+}

@@ -1,0 +1,21 @@
+/// Converts a spacing unit into the desired final units (currently rem)
+///
+/// @param {Number} $value - Number to convert into spacing units
+///
+/// @return {Number} - Rem number returned based on spacing scale
+
+@use 'sass:map';
+@use '../../00-settings/spacing' as settings;
+@use 'rem' as function;
+
+@function units($value) {
+
+  @if not(map.has-key(settings.$spacing, $value)) {
+    @error '"#{$value}" is not a valid unit in $spacing map.';
+  }
+
+  @return function.rem(map.get(settings.$spacing, $value));
+}
+
+// @debug units(0.5);
+// @return 0.25rem;

@@ -1,0 +1,26 @@
+uuid: ff5a4ca9-7470-4993-b5a6-03afa509fc3c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ohana
+_core:
+  default_config_hash: 8yptDf6WrXxeyevUz4nP5vfr7BtxQqCBMninhV2IJ1g
+id: ohana_page_title
+theme: ohana
+region: preface
+weight: -3
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false

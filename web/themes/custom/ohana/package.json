@@ -1,0 +1,72 @@
+{
+  "name": "ohana",
+  "version": "1.0.0",
+  "description": "A Pattern Lab based Drupal starter theme.",
+  "bugs": "https://github.com/chazchumley/ohana/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chazchumley/ohana.git"
+  },
+  "license": "GPL-2.0+",
+  "private": true,
+  "themePath": ".",
+  "main": "gulpfile.js",
+  "engines": {
+    "node": ">=10"
+  },
+  "browserslist": [
+    "explorer >= 11",
+    "last 3 versions",
+    ">1% and not dead"
+  ],
+  "scripts": {
+    "build": "gulp",
+    "compile": "gulp compile",
+    "watch": "gulp watch",
+    "styleguide": "gulp styleguide",
+    "compress": "gulp compress",
+    "lint": "gulp lint",
+    "clean": "gulp clean",
+    "gulp": "gulp",
+    "generate": "yo ohana:component"
+  },
+  "babel": {
+    "sourceType": "unambiguous",
+    "presets": [
+      [
+        "@babel/preset-env"
+      ]
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "@pattern-lab/core": "5.13.0",
+    "@pattern-lab/engine-twig-php": "5.13.0",
+    "@pattern-lab/uikit-workshop": "5.13.0",
+    "browser-sync": "^2.26.12",
+    "del": "^5.1.0",
+    "generator-ohana": "^1.0.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-changed": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^6.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-order": "^1.2.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-stylelint": "^13.0.0",
+    "prettier-eslint": "^11.0.0",
+    "sass": "^1.26.10",
+    "stylelint": "^13.6.1",
+    "stylelint-scss": "^3.18.0",
+    "yo": "^3.1.1"
+  },
+  "dependencies": {},
+  "resolutions": {
+    "@basalt/twig-renderer": "2.0.0"
+  }
+}

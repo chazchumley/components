@@ -1,0 +1,14 @@
+// @file
+// Options element styles.
+
+@use '../../01-core/functions' as *;
+
+// option {}
+
+optgroup {
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: font-weight(bold);
+  line-height: 1.15;
+  margin: 0;
+}

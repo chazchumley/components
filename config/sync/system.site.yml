@@ -1,0 +1,15 @@
+uuid: 98dd9562-8b51-457f-94af-d13af513e57c
+name: Components
+mail: admin@admin.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /user/login
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+mail_notification: ''

@@ -1,0 +1,19 @@
+// @file
+// Definition list styles.
+
+@use '../../01-core/functions' as *;
+
+dd {
+  margin-bottom: units(2);
+  padding-left: units(3);
+
+  dt + & {
+    margin-top: 0;
+  }
+}
+
+dl {
+  margin-bottom: units(2);
+}
+
+// dt {}

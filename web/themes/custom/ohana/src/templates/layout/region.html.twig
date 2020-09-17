@@ -1,0 +1,12 @@
+{% if content %}
+  {% embed '@layouts/region/region.twig' with {
+    'region_name': region|clean_class,
+    'constrain': 'l-constrain'
+  } %}
+
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+
+  {% endembed %}
+{% endif %}

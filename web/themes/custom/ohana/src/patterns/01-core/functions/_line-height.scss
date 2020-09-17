@@ -1,0 +1,20 @@
+/// Returns uniteless line height based on string
+///
+/// @param {String} $value - String to convert into unitless line height
+///
+/// @return {Number} - Unitless number returned based on line height scale
+
+@use 'sass:map';
+@use '../../00-settings/font' as settings;
+
+@function line-height($value) {
+
+  @if not(map.has-key(settings.$line-height, $value)) {
+    @error '"#{$value}" is not a valid line-height in $line-height map.';
+  }
+
+  @return map.get(settings.$line-height, $value);
+}
+
+// @debug line-height(base);
+// @return 1.45;

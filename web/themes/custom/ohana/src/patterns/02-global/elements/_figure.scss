@@ -1,0 +1,10 @@
+// @file
+// Figure element styles.
+
+@use '../../01-core/functions' as *;
+
+figure {
+  margin: 0 0 units(2);
+}
+
+// figcaption {}

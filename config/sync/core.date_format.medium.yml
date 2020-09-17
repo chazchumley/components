@@ -1,0 +1,10 @@
+uuid: 35fb9596-87bc-4d24-81f5-43a76d3cfa87
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: nzL5d024NjXIX_8TlT6uFAu973lmfkmHklJC-2i9rAE
+id: medium
+label: 'Default medium date'
+locked: false
+pattern: 'D, m/d/Y - h:i a'

@@ -1,0 +1,38 @@
+/// Return font family value
+///
+/// @param {String} $family - String to convert into font family
+///
+/// @return {String} - Return font family value based on string
+
+@use 'sass:list';
+@use 'sass:map';
+@use '../../00-settings/font' as settings;
+
+@function font-family($family) {
+  $map: settings.$font-family;
+
+  // Is $family in $font-family map
+  @if not map.has-key($map, $family) {
+    @warn '"#{$family}" is not a valid font in $font-family map.';
+    @return null;
+  }
+
+  // Is $family in list
+  $list: 'ui', 'heading', 'body', 'code', 'alt';
+  @if list.index($list, $family) {
+    $value: map.get($map, $family);
+
+    // Is new $value still in $font-family map
+    @if not map.has-key($map, $value) {
+      @warn '"#{$value}" is not a valid font in $font-family map.';
+      @return null;
+    }
+
+    @return map.get($map, $value);
+  }
+
+  @return map.get($map, $family);
+}
+
+// @debug font-family(serif);
+// @return 'Merriweather, serif';

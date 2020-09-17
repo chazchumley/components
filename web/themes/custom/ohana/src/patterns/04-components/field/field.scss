@@ -1,0 +1,25 @@
+// @file
+// Styles for fields.
+
+@use '../../01-core/functions' as *;
+
+.field {
+  margin-bottom: units(2);
+}
+
+.field__label {
+  font-size: font-size(5);
+  font-weight: font-weight(bold);
+  margin-bottom: units(1);
+}
+
+// Variant
+.field--label-inline {
+  align-items: baseline;
+  display: flex;
+  flex-direction: row;
+
+  .field__label {
+    margin: 0 units(1) 0 0;
+  }
+}

@@ -1,0 +1,97 @@
+// @file
+// List Mixins
+
+@use '../functions' as *;
+@use 'clearfix' as *;
+@use '../../variables' as *;
+
+@mixin list-clean {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    padding-left: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+@mixin list-inline {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+
+  li {
+    padding-left: 0;
+  }
+
+  > li {
+    display: inline;
+  }
+}
+
+@mixin list-pipeline($pipeline-border-color: color(ui, border)) {
+  @include clearfix;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+
+  > li {
+    border-right: 1px solid $pipeline-border-color;
+    display: block;
+    float: left;
+    margin-right: 0.75em;
+    padding-left: 0;
+    padding-right: 0.75em;
+
+    &.is-active {
+      font-weight: font-weight(bold);
+    }
+
+    &:last-child {
+      border-right: 0;
+      margin-right: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+@mixin list-border($list-border-padding: 0.25rem, $list-border-color: color(ui, border)) {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+
+  li {
+    padding-left: 0;
+  }
+
+  > li {
+    border-bottom: 1px solid $list-border-color;
+    padding: $list-border-padding;
+  }
+}
+
+@mixin list-column($list-column-count: 2, $list-column-gap: 2em, $list-item-padding: 0.25em) {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+
+  li {
+    padding-left: 0;
+  }
+
+  > li {
+    break-inside: avoid-column;
+    display: table;
+    margin-bottom: 0;
+    padding-bottom: $list-item-padding;
+  }
+
+  @media(min-width:$small-screen) {
+    column-count: $list-column-count;
+    column-gap: $list-column-gap;
+  }
+}

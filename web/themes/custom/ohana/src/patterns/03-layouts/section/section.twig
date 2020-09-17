@@ -1,0 +1,27 @@
+<section class="l-section {{ modifier }} {{ attributes ? attributes.class }}" {{ attributes ? attributes|without('class','id') }}>
+  {% if constrain %}
+    <div class="{{ constrain }}">
+  {% endif %}
+
+  {% if section_title %}
+    <{{ heading ?: 'h2' }} class="l-section__title">{{ section_title }}</{{ heading ?: 'h2' }}>
+  {% endif %}
+
+  <div class="l-section__content">
+    {% block content %}
+      {{ section_content }}
+    {% endblock %}
+  </div>
+
+  {% if section_postscript %}
+    <div class="l-section__postscript">
+      {% block postscript %}
+        {{ section_postscript }}
+      {% endblock %}
+    </div>
+  {% endif %}
+
+  {% if constrain %}
+    </div>
+  {% endif %}
+</section>

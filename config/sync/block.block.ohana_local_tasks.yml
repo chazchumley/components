@@ -1,0 +1,28 @@
+uuid: 3aa0118d-c815-4f9a-8555-32621afa16e4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ohana
+_core:
+  default_config_hash: c-06bbElRY5sKmglk74ppgTW93Et4-EJFyNiUZMb8JY
+id: ohana_local_tasks
+theme: ohana
+region: preface
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false

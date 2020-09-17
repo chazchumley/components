@@ -1,0 +1,22 @@
+uuid: ea618710-2d94-4b54-84dc-cdeb675a456b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - ohana
+_core:
+  default_config_hash: 5MNdk3fpMKx_xxBTcz2T11DL4XEU1H5SgHl8BsYdFsA
+id: ohana_messages
+theme: ohana
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

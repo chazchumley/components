@@ -1,0 +1,4 @@
+---
+el: .article
+title: Article
+---

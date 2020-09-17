@@ -1,0 +1,14 @@
+// @file
+// SVG background image Mixin
+
+@mixin svg-background($image-name, $image-location: '../images/') {
+  $image: $image-location + $image-name + '.svg';
+  background-image: url($image), linear-gradient(transparent, transparent);
+  background-repeat: no-repeat;
+}
+
+@mixin svg-background-inline($image-name, $image-location: '../images/') {
+  $image: $image-location + $image-name + '.svg';
+  background-image: inline($image), linear-gradient(transparent, transparent);
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,21 @@
+// @file
+// Link mixins
+
+@use '../functions/color' as *;
+
+@mixin link($link: color(text, link), $hover: color(text, link-hover), $active: color(text, link-active), $visit: color(text, link-visited)) {
+  color: $link;
+
+  &:visited {
+    color: $visit;
+  }
+
+  &:hover,
+  &:focus {
+    color: $hover;
+  }
+
+  &:active {
+    color: $active;
+  }
+}

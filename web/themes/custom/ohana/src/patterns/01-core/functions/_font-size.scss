@@ -1,0 +1,21 @@
+/// Return font size (currently rem)
+///
+/// @param {Number} $value - Number to convert into rem units
+///
+/// @return {Number} - Rem number returned based on font size
+
+@use 'sass:map';
+@use '../../00-settings/font' as settings;
+@use 'rem' as function;
+
+@function font-size($size) {
+
+  @if not(map.has-key(settings.$font-size, $size)) {
+    @error '"#{$size}" is not a valid font size in $font-size map.';
+  }
+
+  @return function.rem(map.get(settings.$font-size, $size));
+}
+
+// @debug font-size(5);
+// @return 1rem;

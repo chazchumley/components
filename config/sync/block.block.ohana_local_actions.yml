@@ -1,0 +1,20 @@
+uuid: 54e72ffc-c485-4183-bd40-8d2c52615f22
+langcode: en
+status: true
+dependencies:
+  theme:
+    - ohana
+_core:
+  default_config_hash: PffmQ-ABSz5tFjWmVsR7NesunDnEivvopnJnBjl8KNE
+id: ohana_local_actions
+theme: ohana
+region: content
+weight: -4
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

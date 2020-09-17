@@ -1,0 +1,19 @@
+{#
+ * @file
+ * Display for theme color swatches.
+ *
+ * Each color swatch is populated from the yml file within
+ * this same directory (colors.yml). Add or remove any colors there.
+ *
+#}
+
+{% for title, list in colors %}
+  <h3>{{ title|capitalize }}</h3>
+  <div class="pl-swatch__group">
+    {% for color, hex in list %}
+      <div class="pl-swatch" style="background-color: {{ hex }}">
+        <div class="pl-swatch__meta">{{ color }}<br>{{ hex }}</div>
+      </div>
+    {% endfor %}
+  </div>
+{% endfor %}

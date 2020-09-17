@@ -1,0 +1,20 @@
+/// Convert value to em.
+///
+/// @param {Number} $value - Value to convert.
+/// @param {Number} $context - Base font size or browser context in pixels.
+///
+/// @return {Number} - Value in ems.
+
+@use 'sass:math';
+@use 'sass:meta';
+
+@function em($value, $context: 16px) {
+  @if (meta.type-of($context) != 'number' or math.unit($context) != 'px') {
+    @error 'Browser context must be in pixels.';
+  }
+
+  @return ($value / $context) * 1em;
+}
+
+// @debug em(16px);
+// @retun 1em

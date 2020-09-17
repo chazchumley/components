@@ -1,0 +1,58 @@
+// @file
+// Table styles.
+
+@use '../../01-core/functions' as *;
+
+caption {
+  margin-bottom: units(0.5);
+}
+
+// col {}
+
+// colgroup {}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: units(2);
+  min-width: 100%;
+}
+
+// tbody {}
+
+td {
+  background-color: color(table, background);
+  border: 1px solid color(table, border);
+  padding: units(2);
+}
+
+tfoot {
+  td,
+  th {
+    background-color: color(table, background-foot);
+  }
+}
+
+th {
+  background-color: color(table, background);
+  border: 1px solid color(table, border);
+  padding: units(2);
+  text-align: left;
+}
+
+thead {
+  td,
+  th {
+    background-color: color(table, background-head);
+  }
+
+  @media print {
+    display: table-header-group;
+  }
+}
+
+tr {
+  @media print {
+    page-break-inside: avoid;
+  }
+}
