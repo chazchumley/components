@@ -46,20 +46,21 @@ Composer (https://getcomposer.org/) is a dependency manager for PHP that allows 
 ## Using the training files and configuring Drupal
 
 ### Downloading the training files
-Now that we have all the necessary requirements out of the way we can proceed to downloading a copy of the training files located within the Master branch.
+Now that we have all the necessary requirements out of the way we can proceed to downloading a copy of the training files located within the `Develop` branch.
 
-Begin by locating the green `Clone or download` drop-down button and either choose **Download ZIP**.  Locate the zipped file named `components-develop.zip` and extract it's contents. Make sure to expand the `components-develop.zip` folder and rename the `components-develop` folder to `components`.  For sake of demonstration, I will be copying this folder to a directory called **Training**.
+Begin by locating the green `Code` drop-down button and choose **Download ZIP**.  Locate the zipped file named `components-develop.zip` and extract it's contents. Make sure to rename the `components-develop` folder to `components`.  For sake of demonstration, I will be copying this folder to a directory called **Training**.
 
 OR
 
-Clone the repository to your computer by locating the green `Clone or download` drop-down button and copy the Clone with SSH path and run the similar command in your terminal window.
+Clone the repository to your computer by locating the green `Code` drop-down button and copy the Clone with SSH path and run the similar command in your terminal window.
 
 ```
   git clone git@github.com:chazchumley/components.git
 ```
-If you have chosen to clone the repository please make sure to remove the git origin remote as we will not be pushing any updates back up to the repository.  You can do this by entering the following command in your terminal window.
+If you have chosen to clone the repository please make sure to remove the `git origin remote` as we will not be pushing any updates back up to the repository.  You can do this by entering the following command in your terminal window.
 
 ```
+  cd training/components
   git remote remove origin
 ```
 
