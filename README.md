@@ -45,7 +45,7 @@ Composer (https://getcomposer.org/) is a dependency manager for PHP that allows 
 Now that we have all the necessary requirements out of the way we can proceed by either downloading a copy of the training files located within the `Develop` branch or if we are familiar with `Git` we may choose to clone the branch to our computer.
 
 #### Downloading the repo
-Begin by locating the green `Code` drop-down button and choose **Download ZIP**.  Locate the zipped file named `components-develop.zip` and extract it's contents. Make sure to rename the `components-develop` folder to `components`.
+Begin by locating the green `Code` drop-down button at the top of the page and choose **Download ZIP**.  Locate the zipped file named `components-develop.zip` and extract it's contents. Make sure to rename the `components-develop` folder to `components`.
 
 > For sake of training, we will be copying this folder to a new directory called **Training**.
 
@@ -67,8 +67,6 @@ If you have chosen to clone the repository please make sure to remove the `git o
 Now that we have a copy of the training files on our local computer it is time to use `DDEV` to create our Drupal 9 instance along with installing our theme and any dependencies it may need.  In order to do so we need to make sure we have `Docker` and `DDEV` installed on our computers.
 
 > Note: We will only have to perform this install once.  We will be able to use both Docker and DDEV for future projects.
-
-### Docker / DDEV
 
 ### Docker / DDEV
 To eliminate the need for various setups that may involve different **AMP** (Apache/MySQL/PHP) stacks we have chosen to use `DDEV` a Docker based development environment to work with PHP, MySQL and Drupal.  Prior to installing `DDEV` we can verify the system requirements by navigating to the [System Requirements](https://ddev.readthedocs.io/en/stable/#system-requirements) page and following the directions for our operating system.
