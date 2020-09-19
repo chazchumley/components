@@ -140,8 +140,8 @@ We now have a Drupal 9 project with the `Ohana` theme enabled. We will be using 
 This training does not cover site building but we will briefly discuss various decision made when implementing a component-based theme using Twig and Pattern Lab.
 
 ## Drupal and Pattern Lab Links
-- Drupal 9 URL: `https://components.ddev.site`
-- Pattern Lab URL: `https://components.ddev.site:3000`
+- Drupal 9 URL: https://components.ddev.site
+- Pattern Lab URL: https://components.ddev.site:3000
 
 > Note: If you happen to be a Lando user or have been using another Docker based instance then you may need to modify the ports above to be something like https://components.ddev.site:8000
 
