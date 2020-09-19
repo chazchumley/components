@@ -42,7 +42,7 @@ Composer (https://getcomposer.org/) is a dependency manager for PHP that allows 
 ## Using the training files and configuring Drupal
 
 ### Downloading the training files
-Now that we have all the necessary requirements out of the way we can proceed to either downloading a copy of the training files located within the `Develop` branch or if we are familiar with `Git` we may choose to clone the branch to our computer.
+Now that we have all the necessary requirements out of the way we can proceed by either downloading a copy of the training files located within the `Develop` branch or if we are familiar with `Git` we may choose to clone the branch to our computer.
 
 #### Downloading the repo
 Begin by locating the green `Code` drop-down button and choose **Download ZIP**.  Locate the zipped file named `components-develop.zip` and extract it's contents. Make sure to rename the `components-develop` folder to `components`.
