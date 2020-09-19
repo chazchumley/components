@@ -132,7 +132,9 @@ In order for us to preview our theme within Pattern Lab, we need to start the wa
   ddev npm run watch
 ```
 
-We should now be able to access Pattern Lab by navigating either to `https://components.ddev.site:3000` or by navigating to `http://localhost:3001` within our browser.
+We should now be able to access Pattern Lab by navigating either to https://components.ddev.site:3000 or by navigating to http://localhost:3001 within our browser.
+
+> Note: If you happen to be a Lando user or have been using another Docker based instance then you may need to modify the ports above to be something like https://components.ddev.site:8000
 
 ## Congratulations
 We now have a Drupal 9 project with the `Ohana` theme enabled. We will be using this theme throughout the remaining training. This Drupal 9 instance is configured with the latest best practices in mind for site building. This includes use of  Media, Paragraphs, various Twig modules and the Component libraries modules.
@@ -142,8 +144,6 @@ This training does not cover site building but we will briefly discuss various d
 ## Drupal and Pattern Lab Links
 - Drupal 9 URL: https://components.ddev.site
 - Pattern Lab URL: https://components.ddev.site:3000
-
-> Note: If you happen to be a Lando user or have been using another Docker based instance then you may need to modify the ports above to be something like https://components.ddev.site:8000
 
 ## Drupal Credentials
 - username: **admin**
