@@ -50,11 +50,11 @@ Begin by locating the green `Code` drop-down button at the top of the page and c
 > For sake of training, we will be copying this folder to a new directory called **Training**.
 
 #### Cloning the repo
-If you prefer to clone the repository to your computer using `Git`, we can do so by locating the green `Code` drop-down button, selecting the `SSH` option and copying the path to our clipboard for use by running the following command in our terminal window.
+If you prefer to clone the repository to your computer using `Git`, we can do so by locating the green `Code` drop-down button, selecting the `HTTPS` option and copying the path to our clipboard for use by running the following command in our terminal window.
 
 ```
   cd training
-  git clone git@github.com:chazchumley/components.git
+  git clone https://github.com/chazchumley/components.git
 ```
 
 If you have chosen to clone the repository please make sure to remove the `git origin remote` as we will not be pushing any updates back up to the repository.  You can do this by entering the following command in our terminal window.
@@ -132,7 +132,7 @@ In order for us to preview our theme within Pattern Lab, we need to start the wa
   ddev npm run watch
 ```
 
-We should now be able to access Pattern Lab ny navigating either to `https://components/ddev/site:3000` or by navigating to `http:localhost:3001` within our browser.
+We should now be able to access Pattern Lab by navigating either to `https://components.ddev.site:3000` or by navigating to `http://localhost:3001` within our browser.
 
 ## Congratulations
 We now have a Drupal 9 project with the `Ohana` theme enabled. We will be using this theme throughout the remaining training. This Drupal 9 instance is configured with the latest best practices in mind for site building. This includes use of  Media, Paragraphs, various Twig modules and the Component libraries modules.
@@ -142,6 +142,8 @@ This training does not cover site building but we will briefly discuss various d
 ## Drupal and Pattern Lab Links
 - Drupal 9 URL: `https://components.ddev.site`
 - Pattern Lab URL: `https://components.ddev.site:3000`
+
+> Note: If you happen to be a Lando user or have been using another Docker based instance then you may need to modify the ports above to be something like https://components.ddev.site:8000
 
 ## Drupal Credentials
 - username: **admin**
