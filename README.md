@@ -90,7 +90,7 @@ Once DDEV finishes spinning up the containers it will automatically scaffold up 
 > Note: anytime we need to install, remove or update modules or depedencies DDEV requires the `ddev` prefix in order to execute these commands within the terminal window.
 
 ## Working with the theme
-The custom Drupal theme, `ohana` can be found in the `web/themes/custom` folder and the first time `DDEV` open our Drupal 9 website, it does not have access to our theme's compiled assets (CSS, Images, JS)  In order for Drupal to have access to those files we will need to install the theme's dependencies and compile it.
+The custom Drupal theme, `ohana` can be found in the `web/themes/custom` folder and the first time `DDEV` opens our Drupal 9 website, it does not have access to our theme's compiled assets (CSS, Images, JS)  In order for Drupal to have access to those files we will need to install the theme's dependencies and compile it.
 
 ### Installing theme dependencies
 To ensure that we install and use the correct version of `node` required by our theme, we will need to enter the following commands in the terminal window:
