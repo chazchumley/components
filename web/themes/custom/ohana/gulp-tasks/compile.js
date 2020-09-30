@@ -30,7 +30,10 @@ module.exports = {
   // Compile Sass.
   compileSass: function() {
     return src('./src/patterns/**/**/*.scss')
-      .pipe(sass({outputStyle: 'expanded'}).on('error', handleError))
+      .pipe(sass({
+        includePaths: ['node_modules'],
+        outputStyle: 'expanded'
+      }).on('error', handleError))
       .pipe(prefix({ cascade: false }))
       .pipe(rename(function(path) { path.dirname = ''; return path;}))
       .pipe(dest('./dist/css'));

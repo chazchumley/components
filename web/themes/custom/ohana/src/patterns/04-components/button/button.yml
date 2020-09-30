@@ -1,6 +1,3 @@
 ---
-is_button: true
 modifier: ''
-is_disabled: false
-url: '#'
-text: 'Button'
+text: 'Button Text'

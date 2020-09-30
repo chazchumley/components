@@ -1,4 +1,10 @@
-<section class="l-section {{ modifier }} {{ attributes ? attributes.class }}" {{ attributes ? attributes|without('class','id') }}>
+{% set classes = [
+  'l-section',
+  modifier ? modifier,
+  attributes ? attributes.class
+]|join(' ')|trim %}
+
+<section class="{{ classes }}" {{ attributes ? attributes|without('class','id') }}>
   {% if constrain %}
     <div class="{{ constrain }}">
   {% endif %}
