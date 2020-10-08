@@ -44,12 +44,12 @@ Composer (https://getcomposer.org/) is a dependency manager for PHP that allows 
 ### Downloading the training files
 Now that we have all the necessary requirements out of the way we can proceed by either downloading a copy of the training files located within the `Develop` branch or if we are familiar with `Git` we may choose to clone the branch to our computer.
 
-#### Downloading the repo
+### Downloading the repo
 Begin by locating the green `Code` drop-down button at the top of the page and choose **Download ZIP**.  Locate the zipped file named `components-develop.zip` and extract it's contents. Make sure to rename the `components-develop` folder to `components`.
 
 > For sake of training, we will be copying this folder to a new directory called **Training**.
 
-#### Cloning the repo
+### Cloning the repo
 If you prefer to clone the repository to your computer using `Git`, we can do so by locating the green `Code` drop-down button, selecting the `HTTPS` option and copying the path to our clipboard for use by running the following command in our terminal window.
 
 ```
