@@ -133,13 +133,12 @@ To build the entire codebase for our theme, we will need to run the following co
 
 > This commands builds our theme, assets and Pattern Lab
 
-## Congratulations
+## Accessing our site
 We now have a Drupal 9 project with the `Ohana` theme enabled. We will be using this theme throughout the remaining training. This Drupal 9 instance is configured with the latest best practices in mind for site building. This includes use of  Media, Paragraphs, various Twig modules and the Component libraries modules.
 
 This training does not cover site building but we will briefly discuss various decision made when implementing a component-based theme using Twig and Pattern Lab.
 
-## Accessing our site
-Now that we have successully built our Drupal 9 website, built and compiled our themes dependencies, our website is avalable to preview.  We can access the Drupal site by opening up a browser, navigating to the login screen and entering the crednetials below.
+We can access the Drupal site by opening up a browser, navigating to the login screen and entering the credentials below.
 
 ### Drupal Site
 - Drupal 9 URL: https://components.ddev.site
