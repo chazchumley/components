@@ -163,3 +163,5 @@ This training does not cover site building but we will briefly discuss various d
 ## Drupal Credentials
 - username: **admin**
 - password: **admin**
+
+- exec-host: ddev launch /user
