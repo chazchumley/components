@@ -15,9 +15,3 @@ use_dns_when_possible: true
 hooks:
   post-start:
     - composer: install
-    - exec: /var/www/html/db/import-db.sh
-    - exec: drush updb -y
-    - exec: drush cim -y
-    - exec-host: cp web/sites/example.development.services.yml web/sites/development.services.yml
-    - exec: drush cr
-    - exec-host: ddev launch /user

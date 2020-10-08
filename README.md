@@ -79,15 +79,30 @@ Once completed we will revisit how to use DDEV to import a Drupal 9 website as w
 The initial setup of DDEV requires a configuration file which we have already provided located in the `.ddev` folder of the project.  In order to initialize the Docker containers needed by DDEV we will need to execure the following commands within the terminal window.
 
 ```
-  cd training/components
   ddev start
 ```
 
 > Note: If this is the first time ever starting DDEV, we may be prompted to send anonymous usage statisitics and errors.  This is completely up to you to opt in or opt out.
 
-Once DDEV finishes spinning up the containers it will automatically scaffold up our Drupal 9 instance by running the composer install command, import our datbase, run any configuration and open the Drupal 9 website within a browser.
+Once DDEV finishes spinning up the containers it will automatically scaffold up our Drupal 9 instance by running the composer install command.
 
 > Note: anytime we need to install, remove or update modules or depedencies DDEV requires the `ddev` prefix in order to execute these commands within the terminal window.
+
+## Importing the Database
+If this is the first time setting up the traing file then we will want to import the database snapshot found in the `db` folder. We can execute the following commands within the terminal window.
+
+```
+  ddev import-db --src=db/components.sql.gz
+```
+
+## Running Database updates and importing configuration
+To ensure we are following best practices it is a good habit to make sure the both the database is up to date and that we have imported the latest configuraiont files.  We can accomplish both these tasks using `Drush` which is a command line tool for working with Drupal 8/9.  Within our terminal window make sure to execute the following commands.
+
+```
+  ddev drush updb -y && ddev drush cim -y && ddev drush cr
+```
+
+> Note: the first drush command tells Drupal to run database updates, while the second command tells Drupal to import any configurations files found in the `config` folder and the last command tells Drupal to rebuild the cache.  While outside the scope of our training, if you are interested in seeing all the various `Drush` commands we can visit the following link: [Drush Comands](https://drushcommands.com/).
 
 ## Working with the theme
 The custom Drupal theme, `ohana` can be found in the `web/themes/custom` folder and the first time `DDEV` opens our Drupal 9 website, it does not have access to our theme's compiled assets (CSS, Images, JS).  In order for Drupal to have access to those files we will need to install the theme's dependencies and compile it.
