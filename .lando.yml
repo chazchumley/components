@@ -1,0 +1,6 @@
+name: components
+recipe: drupal9
+config:
+  php: '7.4'
+  via: apache
+  webroot: web
