@@ -75,7 +75,7 @@ Once we have verified and/or met the System Requirements for DDEV, we can move o
 
 Once completed we will revisit how to use DDEV to import a Drupal 9 website as well as how to start a server, run composer, drush and import the initial database snapshot that will be used throughout the training.
 
-#### Setup
+### Setup
 The initial setup of DDEV requires a configuration file which we have already provided located in the `.ddev` folder of the project.  In order to initialize the Docker containers needed by DDEV we will need to execure the following commands within the terminal window.
 
 ```
@@ -88,14 +88,14 @@ Once DDEV finishes spinning up the containers it will automatically scaffold up 
 
 > Note: anytime we need to install, remove or update modules or depedencies DDEV requires the `ddev` prefix in order to execute these commands within the terminal window.
 
-#### Importing the Database
+### Importing the Database
 If this is the first time setting up the traing file then we will want to import the database snapshot found in the `db` folder. We can execute the following commands within the terminal window.
 
 ```
   ddev import-db --src=db/components.sql.gz
 ```
 
-#### Running Database updates and importing configuration
+### Running Database updates and importing configuration
 To ensure we are following best practices it is a good habit to make sure the both the database is up to date and that we have imported the latest configuraiont files.  We can accomplish both these tasks using `Drush` which is a command line tool for working with Drupal 8/9.  Within our terminal window make sure to execute the following commands.
 
 ```
@@ -124,7 +124,7 @@ Next we will need to install all of the node dependencies (Gulp, Pattern Lab, Br
 
 > This command will ensure our theme has all the dependencies it needs to be able to compile our codebase.
 
-### Build/Compile the theme
+### Building the theme
 To build the entire codebase for our theme, we will need to run the following command within the terminal window:
 
 ```
@@ -138,25 +138,27 @@ We now have a Drupal 9 project with the `Ohana` theme enabled. We will be using 
 
 This training does not cover site building but we will briefly discuss various decision made when implementing a component-based theme using Twig and Pattern Lab.
 
-## Drupal and Pattern Lab Links
-- Drupal 9 URL: https://components.ddev.site
-- Pattern Lab URL: https://components.ddev.site:3000
+## Accessing our site
+Now that we have successully built our Drupal 9 website, built and compiled our themes dependencies, our website is avalable to preview.  We can access the Drupal site by opening up a browser, navigating to the login screen and entering the crednetials below.
 
-## Drupal Credentials
+### Drupal Site
+- Drupal 9 URL: https://components.ddev.site
+
+### Drupal Credentials
 - username: **admin**
 - password: **admin**
 
 > Note: If you happen to be a Lando user or have been using another Docker based instance then you may need to modify the ports above to be something like https://components.ddev.site:8000
 
-### Clear Drupal cache
-While our theme has been built we currently will only be able to tell so by clearing Drupal's cache in the browser, where we will see a small change to our theme's font and color.  We can accomplish this by entering the following command in our terminal window.
+### Clearing Drupal cache
+While our theme has been built we currently may not see all the default styling displayed.  This is often due to Drupal's theme layer not having registered the changes.  This is easy to resolve by clearing Drupal's cache.  We can accomplish this by entering the following command in our terminal window.
 
 ```
   ddev drush cr
 ```
 
-### Run the watch task to access Pattern Lab
-In order for us to preview our theme within Pattern Lab, we need to start the watch task.  This command will listen for changes we make to various files and automatically compile it and make it accessible to Drupal.  We can accomplish this by running the following command from the terminal window:
+### Running the watch tasks
+In order for us to preview our theme within Pattern Lab, we need to start the watch task.  This command will listen for changes we make to various files and automatically compile assets and make it accessible to Drupal.  We can accomplish this by running the following command from the terminal window:
 
 ```
   ddev npm run watch
@@ -164,4 +166,5 @@ In order for us to preview our theme within Pattern Lab, we need to start the wa
 
 We should now be able to access Pattern Lab by navigating either to https://components.ddev.site:3000 or by navigating to http://localhost:3001 within our browser.
 
-
+### Pattern Lab Links
+- Pattern Lab URL: https://components.ddev.site:3000
