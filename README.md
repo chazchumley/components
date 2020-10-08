@@ -156,7 +156,7 @@ While our theme has been built we currently may not see all the default styling 
   ddev drush cr
 ```
 
-### Running the watch tasks
+## Running the watch tasks
 In order for us to preview our theme within Pattern Lab, we need to start the watch task.  This command will listen for changes we make to various files and automatically compile assets and make it accessible to Drupal.  We can accomplish this by running the following command from the terminal window:
 
 ```
