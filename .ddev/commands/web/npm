@@ -1,7 +1,0 @@
-#!/bin/bash
-
-## Description: Run npm commands inside theme.
-## Usage: npm [flags] [args]
-## Example: "npm install or npm rebuild node-sass or npm run build or npm run watch"
-
-cd /var/www/html/web/themes/custom/ohana && npm $@
