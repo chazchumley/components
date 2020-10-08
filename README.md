@@ -75,7 +75,7 @@ Once we have verified and/or met the System Requirements for DDEV, we can move o
 
 Once completed we will revisit how to use DDEV to import a Drupal 9 website as well as how to start a server, run composer, drush and import the initial database snapshot that will be used throughout the training.
 
-### Setup
+#### Setup
 The initial setup of DDEV requires a configuration file which we have already provided located in the `.ddev` folder of the project.  In order to initialize the Docker containers needed by DDEV we will need to execure the following commands within the terminal window.
 
 ```
@@ -88,14 +88,14 @@ Once DDEV finishes spinning up the containers it will automatically scaffold up 
 
 > Note: anytime we need to install, remove or update modules or depedencies DDEV requires the `ddev` prefix in order to execute these commands within the terminal window.
 
-## Importing the Database
+#### Importing the Database
 If this is the first time setting up the traing file then we will want to import the database snapshot found in the `db` folder. We can execute the following commands within the terminal window.
 
 ```
   ddev import-db --src=db/components.sql.gz
 ```
 
-## Running Database updates and importing configuration
+#### Running Database updates and importing configuration
 To ensure we are following best practices it is a good habit to make sure the both the database is up to date and that we have imported the latest configuraiont files.  We can accomplish both these tasks using `Drush` which is a command line tool for working with Drupal 8/9.  Within our terminal window make sure to execute the following commands.
 
 ```
@@ -133,6 +133,21 @@ To build the entire codebase for our theme, we will need to run the following co
 
 > This commands builds our theme, assets and Pattern Lab
 
+## Congratulations
+We now have a Drupal 9 project with the `Ohana` theme enabled. We will be using this theme throughout the remaining training. This Drupal 9 instance is configured with the latest best practices in mind for site building. This includes use of  Media, Paragraphs, various Twig modules and the Component libraries modules.
+
+This training does not cover site building but we will briefly discuss various decision made when implementing a component-based theme using Twig and Pattern Lab.
+
+## Drupal and Pattern Lab Links
+- Drupal 9 URL: https://components.ddev.site
+- Pattern Lab URL: https://components.ddev.site:3000
+
+## Drupal Credentials
+- username: **admin**
+- password: **admin**
+
+> Note: If you happen to be a Lando user or have been using another Docker based instance then you may need to modify the ports above to be something like https://components.ddev.site:8000
+
 ### Clear Drupal cache
 While our theme has been built we currently will only be able to tell so by clearing Drupal's cache in the browser, where we will see a small change to our theme's font and color.  We can accomplish this by entering the following command in our terminal window.
 
@@ -149,19 +164,4 @@ In order for us to preview our theme within Pattern Lab, we need to start the wa
 
 We should now be able to access Pattern Lab by navigating either to https://components.ddev.site:3000 or by navigating to http://localhost:3001 within our browser.
 
-> Note: If you happen to be a Lando user or have been using another Docker based instance then you may need to modify the ports above to be something like https://components.ddev.site:8000
 
-## Congratulations
-We now have a Drupal 9 project with the `Ohana` theme enabled. We will be using this theme throughout the remaining training. This Drupal 9 instance is configured with the latest best practices in mind for site building. This includes use of  Media, Paragraphs, various Twig modules and the Component libraries modules.
-
-This training does not cover site building but we will briefly discuss various decision made when implementing a component-based theme using Twig and Pattern Lab.
-
-## Drupal and Pattern Lab Links
-- Drupal 9 URL: https://components.ddev.site
-- Pattern Lab URL: https://components.ddev.site:3000
-
-## Drupal Credentials
-- username: **admin**
-- password: **admin**
-
-- exec-host: ddev launch /user
