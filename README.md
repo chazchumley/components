@@ -60,19 +60,10 @@ To ensure we are following best practices it is a good habit to make sure the bo
 The custom Drupal theme, `ohana` can be found in the `web/themes/custom` folder and the first time `DDEV` opens our Drupal 9 website, it does not have access to our theme's compiled assets (CSS, Images, JS).  In order for Drupal to have access to those files we will need to install the theme's dependencies and compile it.
 
 ### Installing theme dependencies
-To ensure that we install and use the correct version of `node` required by our theme, we will need to enter the following commands in the terminal window:
+We will need to install all of the node dependencies (Gulp, Pattern Lab, Browsersync, and others). We can do this by enterting the next command in the terminal window:
 
 ```
-  cd web/themes/custom/ohana
-  ddev nvm install && ddev nvm use
-```
-
-> We only need to run these commands once.
-
-Next we will need to install all of the node dependencies (Gulp, Pattern Lab, Browsersync, and others). We can do this by enterting the next command in the terminal window:
-
-```
-  ddev npm install
+  npm install
 ```
 
 > This command will ensure our theme has all the dependencies it needs to be able to compile our codebase.
@@ -81,7 +72,7 @@ Next we will need to install all of the node dependencies (Gulp, Pattern Lab, Br
 To build the entire codebase for our theme, we will need to run the following command within the terminal window:
 
 ```
-  ddev npm run build
+  npm run build
 ```
 
 > This commands builds our theme, assets and Pattern Lab
@@ -111,10 +102,10 @@ While our theme has been built we currently may not see all the default styling 
 In order for us to preview our theme within Pattern Lab, we need to start the watch task.  This command will listen for changes we make to various files and automatically compile assets and make it accessible to Drupal.  We can accomplish this by running the following command from the terminal window:
 
 ```
-  ddev npm run watch
+  npm run watch
 ```
 
-We should now be able to access Pattern Lab by navigating either to https://components.ddev.site:3000 or by navigating to http://localhost:3001 within our browser.
+We should now be able to access Pattern Lab by navigating to http://localhost:3001 within our browser.
 
 ### Pattern Lab Links
 - Pattern Lab URL: https://components.ddev.site:3000

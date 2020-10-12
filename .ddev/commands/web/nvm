@@ -1,7 +1,0 @@
-#!/bin/bash
-
-## Description: Install or use node.
-## Usage: nvm [flags] [args]
-## Example: "nvm use or nvm install"
-
-source /etc/profile && cd /var/www/html/web/themes/custom/ohana && nvm $@
