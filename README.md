@@ -35,40 +35,33 @@ Once `Lando` finishes spinning up the containers we will need to scaffold up our
   lando composer install
 ```
 
-> Note: anytime we need to install, remove or update modules or depedencies DDEV requires the `ddev` prefix in order to execute these commands within the terminal window.
+> Note: anytime we need to install, remove or update modules or depedencies `Lando` requires the `lando` prefix in order to execute these commands within the terminal window.
 
 ### Importing the Database
 If this is the first time setting up the traing file then we will want to import the database snapshot found in the `db` folder. We can execute the following commands within the terminal window.
 
 ```
-  ddev import-db --src=db/components.sql.gz
+  lando db-import db/components.sql.gz
 ```
 
 ### Running Database updates and importing configuration
 To ensure we are following best practices it is a good habit to make sure the both the database is up to date and that we have imported the latest configuraiont files.  We can accomplish both these tasks using `Drush` which is a command line tool for working with Drupal 8/9.  Within our terminal window make sure to execute the following commands.
 
 ```
-  ddev drush updb -y && ddev drush cim -y && ddev drush cr
+  lando drush updb -y && lando drush cim -y && lando drush cr
 ```
 
 > Note: the first drush command tells Drupal to run database updates, while the second command tells Drupal to import any configurations files found in the `config` folder and the last command tells Drupal to rebuild the cache.  While outside the scope of our training, if you are interested in seeing all the various `Drush` commands we can visit the following link: [Drush Comands](https://drushcommands.com/).
 
 ## Working with the theme
-The custom Drupal theme, `ohana` can be found in the `web/themes/custom` folder and the first time `DDEV` opens our Drupal 9 website, it does not have access to our theme's compiled assets (CSS, Images, JS).  In order for Drupal to have access to those files we will need to install the theme's dependencies and compile it.
+The custom Drupal theme, `ohana` can be found in the `web/themes/custom` folder and the first time `Lando` opens our Drupal 9 website, it does not have access to our theme's compiled assets (CSS, Images, JS).  In order for Drupal to have access to those files we will need to install the theme's dependencies and compile it.
 
 ### Installing theme dependencies
-To ensure that we install and use the correct version of `node` required by our theme, we will need to enter the following commands in the terminal window:
+We will need to install all of the node dependencies (Gulp, Pattern Lab, Browsersync, and others). We can do this by enterting the next command in the terminal window:
 
 ```
-  ddev nvm install && ddev nvm use
-```
-
-> We only need to run these commands once.
-
-Next we will need to install all of the node dependencies (Gulp, Pattern Lab, Browsersync, and others). We can do this by enterting the next command in the terminal window:
-
-```
-  ddev npm install
+  cd web/themes/custom/ohana
+  npm install
 ```
 
 > This command will ensure our theme has all the dependencies it needs to be able to compile our codebase.
@@ -77,7 +70,7 @@ Next we will need to install all of the node dependencies (Gulp, Pattern Lab, Br
 To build the entire codebase for our theme, we will need to run the following command within the terminal window:
 
 ```
-  ddev npm run build
+  npm run build
 ```
 
 > This commands builds our theme, assets and Pattern Lab
@@ -90,29 +83,27 @@ This training does not cover site building but we will briefly discuss various d
 We can access the Drupal site by opening up a browser, navigating to the login screen and entering the credentials below.
 
 ### Drupal Site
-- Drupal 9 URL: https://components.ddev.site
+- Drupal 9 URL: https://components.lndo.site
 
 ### Drupal Credentials
 - username: **admin**
 - password: **admin**
 
-> Note: If you happen to be a Lando user or have been using another Docker based instance then you may need to modify the ports above to be something like https://components.ddev.site:8000
-
 ### Clearing Drupal cache
 While our theme has been built we currently may not see all the default styling displayed.  This is often due to Drupal's theme layer not having registered the changes.  This is easy to resolve by clearing Drupal's cache.  We can accomplish this by entering the following command in our terminal window.
 
 ```
-  ddev drush cr
+  lando drush cr
 ```
 
 ## Running the watch tasks
 In order for us to preview our theme within Pattern Lab, we need to start the watch task.  This command will listen for changes we make to various files and automatically compile assets and make it accessible to Drupal.  We can accomplish this by running the following command from the terminal window:
 
 ```
-  ddev npm run watch
+  npm run watch
 ```
 
-We should now be able to access Pattern Lab by navigating either to https://components.ddev.site:3000 or by navigating to http://localhost:3001 within our browser.
+We should now be able to access Pattern Lab by navigating either to https://components.lndo.site:3000 or by navigating to http://localhost:3001 within our browser.
 
 ### Pattern Lab Links
-- Pattern Lab URL: https://components.ddev.site:3000
+- Pattern Lab URL: https://components.lndo.site:3000
