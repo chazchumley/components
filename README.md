@@ -51,7 +51,10 @@ We will want to install `Gulp` globally on our operating system.  Since we insta
 These next steps will vary based on how you prefer to setup your local development environment.  Most organizations have moved away from virtual machines or standalone `LAMP` environment such as MAMP, WAMP or Acquia Dev Desktop for doing Drupal development.  In it's place is the use of container based environments that utilize `Docker`.
 
 ### Optional Branches
-If you would like to use `DDEV` or `LANDO` which are wrapper for `Docker` then you can checkout either the [develop-ddev](https://github.com/chazchumley/components/tree/develop-ddev) or [develop-lando](https://github.com/chazchumley/components/tree/develop-lando) branches I have setup.
+If you would like to use `DDEV` or `LANDO` which are wrappers for `Docker` then you can continue the setup process by using on the following branches:
+
+- [develop-ddev](https://github.com/chazchumley/components/tree/develop-ddev)
+- [develop-lando](https://github.com/chazchumley/components/tree/develop-lando)
 
 If you prefer to setup the rest of the project using something else, then you will need to be able to scaffold a Drupal project, Import the database snapshot provided and be able to run various commands using the tools we installed previously.
 
