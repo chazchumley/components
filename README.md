@@ -12,7 +12,7 @@ Below is a list of requirements that will ensure you get the most out of the tra
 - Node & NPM
 - Gulp
 - Git
-- DDEV (Docker based setup)
+- LANDO (Docker based setup)
 
 ### Administrative rights
 You will need to ensure that you have administrative rights to install, configure or manage file permissions required by the list of tools outlined above.  If you do not have administrative rights, in the case of using a work laptop, then please have your company install the following items for you.
@@ -20,12 +20,12 @@ You will need to ensure that you have administrative rights to install, configur
 ### Terminal
 The terminal is an interface in which we can execute text based commands.  It can be much faster to complete some tasks using a Terminal than with graphical applications and menus. The remaining requirements will be mostly ran from a Terminal using a series of command line prompts.  Take a moment to ensure that you have a Terminal (MAC) or Command Prompt (Windows) available to use.
 
-> We will be using the terminal window to work with tools such as `DDEV`, `Composer`, `NPM`, and `Gulp` throughout the training.  It is important to be comfortable using the command line as it should be part of any daily Front End development workflow.
+> We will be using the terminal window to work with tools such as `LANDO`, `Composer`, `NPM`, and `Gulp` throughout the training.  It is important to be comfortable using the command line as it should be part of any daily Front End development workflow.
 
 ### Composer
 Composer (https://getcomposer.org/) is a dependency manager for PHP that allows us to perform a multitude of tasks; everything from creating a Drupal project to declaring libraries and even installing contributed modules. The advantage of using Composer is that it allows us to quickly install and update dependencies by simply running a few commands from a terminal window.
 
-`DDEV` will allow us to run these commands without the need to physically install `Composer` on our computer or laptop.  We will revisit the various `Composer` commands that will be used later during the training.
+`LANDO` will allow us to run these commands without the need to physically install `Composer` on our computer or laptop.  We will revisit the various `Composer` commands that will be used later during the training.
 
 ### Node & NPM
 [Node](https://nodejs.org/en/) is a cross platform runtime environment for creating server side and networking applications. JavaScript running outside the browser. [NPM](https://www.npmjs.com/) is the package manager for JavaScript used to install, share, and distribute code and is used to manage dependencies in projects.
