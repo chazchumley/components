@@ -1,5 +1,5 @@
 # Override the web container's standard HTTP_EXPOSE
-# to access patternlab on https://drupaltraining.ddev.site:3000.
+# to access patternlab on https://components.ddev.site:3000.
 version: '3.6'
 services:
   web:

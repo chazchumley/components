@@ -3,66 +3,13 @@ This repository provides a detailed guide to setting up a local development envi
 
 Please ensure that you follow the directions outlined below to install and configure the necessary requirements for this training. We will not be able to cover these steps in class nor will we have time to stop class to assist with setting up laptops.
 
-Below is a list of requirements that will ensure you get the most out of the training.
-
-## Requirements
-- Administrative rights to install and configure various applications
-- Terminal
-- Composer
-- Node & NPM
-- Gulp
-- Git
-- DDEV (Docker based setup)
-
-### Administrative rights
-You will need to ensure that you have administrative rights to install, configure or manage file permissions required by the list of tools outlined above.  If you do not have administrative rights, in the case of using a work laptop, then please have your company install the following items for you.
-
-### Terminal
-The terminal is an interface in which we can execute text based commands.  It can be much faster to complete some tasks using a Terminal than with graphical applications and menus. The remaining requirements will be mostly ran from a Terminal using a series of command line prompts.  Take a moment to ensure that you have a Terminal (MAC) or Command Prompt (Windows) available to use.
-
-> We will be using the terminal window to work with tools such as `DDEV`, `Composer`, `NPM`, and `Gulp` throughout the training.  It is important to be comfortable using the command line as it should be part of any daily Front End development workflow.
-
-### Composer
-Composer (https://getcomposer.org/) is a dependency manager for PHP that allows us to perform a multitude of tasks; everything from creating a Drupal project to declaring libraries and even installing contributed modules. The advantage of using Composer is that it allows us to quickly install and update dependencies by simply running a few commands from a terminal window.
-
-`DDEV` will allow us to run these commands without the need to physically install `Composer` on our computer or laptop.  We will revisit the various `Composer` commands that will be used later during the training.
-
-### Node & NPM
-[Node](https://nodejs.org/en/) is a cross platform runtime environment for creating server side and networking applications. JavaScript running outside the browser. [NPM](https://www.npmjs.com/) is the package manager for JavaScript used to install, share, and distribute code and is used to manage dependencies in projects.
-
-> We will be using NPM to manage dependencies when working with themes in Drupal 9.
-
-`DDEV` will allow us to run these commands without the need to physically install `NPM` on our computer or laptop.  We will revisit the various `NPM` commands that will be used later during the training.
-
-### Gulp
-[Gulp](https://gulpjs.com/) is a JavaScript task runner that allows us to perform repetitive tasks like minification, compilation, unit testing, linting and more. We use `Gulp` to compile Sass, Pattern Lab and watch for file changes during development.
-
-`DDEV` will allow us to run these commands without the need to physically install `Gulp` on our computer or laptop.  We will revisit the various `Gulp` commands that will be used later during the training.
-
-## Using the training files and configuring Drupal
-
 ### Downloading the training files
-Now that we have all the necessary requirements out of the way we can proceed by either downloading a copy of the training files located within the `Develop` branch or if we are familiar with `Git` we may choose to clone the branch to our computer.
+Now that we have all the necessary requirements out of the way we can proceed by downloading a copy of the training files located within the `develop-ddev` branch.
 
 ### Downloading the repo
 Begin by locating the green `Code` drop-down button at the top of the page and choose **Download ZIP**.  Locate the zipped file named `components-develop.zip` and extract it's contents. Make sure to rename the `components-develop` folder to `components`.
 
 > For sake of training, we will be copying this folder to a new directory called **Training**.
-
-### Cloning the repo
-If you prefer to clone the repository to your computer using `Git`, we can do so by locating the green `Code` drop-down button, selecting the `HTTPS` option and copying the path to our clipboard for use by running the following command in our terminal window.
-
-```
-  cd training
-  git clone https://github.com/chazchumley/components.git
-```
-
-If you have chosen to clone the repository please make sure to remove the `git origin remote` as we will not be pushing any updates back up to the repository.  You can do this by entering the following command in our terminal window.
-
-```
-  cd training/components
-  git remote remove origin
-```
 
 Now that we have a copy of the training files on our local computer it is time to use `DDEV` to create our Drupal 9 instance along with installing our theme and any dependencies it may need.  In order to do so we need to make sure we have `Docker` and `DDEV` installed on our computers.
 
@@ -84,7 +31,11 @@ The initial setup of DDEV requires a configuration file which we have already pr
 
 > Note: If this is the first time ever starting DDEV, we may be prompted to send anonymous usage statisitics and errors.  This is completely up to you to opt in or opt out.
 
-Once DDEV finishes spinning up the containers it will automatically scaffold up our Drupal 9 instance by running the composer install command.
+Once DDEV finishes spinning up the containers we will need to scaffold up our Drupal 9 instance by running the the following composer command.
+
+```
+  ddev composer install
+```
 
 > Note: anytime we need to install, remove or update modules or depedencies DDEV requires the `ddev` prefix in order to execute these commands within the terminal window.
 
@@ -111,6 +62,7 @@ The custom Drupal theme, `ohana` can be found in the `web/themes/custom` folder 
 To ensure that we install and use the correct version of `node` required by our theme, we will need to enter the following commands in the terminal window:
 
 ```
+  cd web/themes/custom/ohana
   ddev nvm install && ddev nvm use
 ```
 
@@ -146,8 +98,6 @@ We can access the Drupal site by opening up a browser, navigating to the login s
 ### Drupal Credentials
 - username: **admin**
 - password: **admin**
-
-> Note: If you happen to be a Lando user or have been using another Docker based instance then you may need to modify the ports above to be something like https://components.ddev.site:8000
 
 ### Clearing Drupal cache
 While our theme has been built we currently may not see all the default styling displayed.  This is often due to Drupal's theme layer not having registered the changes.  This is easy to resolve by clearing Drupal's cache.  We can accomplish this by entering the following command in our terminal window.
