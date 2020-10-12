@@ -103,7 +103,7 @@ In order for us to preview our theme within Pattern Lab, we need to start the wa
   npm run watch
 ```
 
-We should now be able to access Pattern Lab by navigating either to https://components.lndo.site:3000 or by navigating to http://localhost:3001 within our browser.
+We should now be able to access Pattern Lab by navigating to the following url within our browser.
 
 ### Pattern Lab Links
-- Pattern Lab URL: https://components.lndo.site:3000
+- Pattern Lab URL: https://localhost:3000
