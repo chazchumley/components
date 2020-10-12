@@ -24,7 +24,5 @@ tooling:
     service: myservice
   npm:
     service: myservice
-  yarn:
-    service: myservice
   gulp:
     service: myservice

@@ -3,88 +3,37 @@ This repository provides a detailed guide to setting up a local development envi
 
 Please ensure that you follow the directions outlined below to install and configure the necessary requirements for this training. We will not be able to cover these steps in class nor will we have time to stop class to assist with setting up laptops.
 
-Below is a list of requirements that will ensure you get the most out of the training.
-
-## Requirements
-- Administrative rights to install and configure various applications
-- Terminal
-- Composer
-- Node & NPM
-- Gulp
-- Git
-- LANDO (Docker based setup)
-
-### Administrative rights
-You will need to ensure that you have administrative rights to install, configure or manage file permissions required by the list of tools outlined above.  If you do not have administrative rights, in the case of using a work laptop, then please have your company install the following items for you.
-
-### Terminal
-The terminal is an interface in which we can execute text based commands.  It can be much faster to complete some tasks using a Terminal than with graphical applications and menus. The remaining requirements will be mostly ran from a Terminal using a series of command line prompts.  Take a moment to ensure that you have a Terminal (MAC) or Command Prompt (Windows) available to use.
-
-> We will be using the terminal window to work with tools such as `LANDO`, `Composer`, `NPM`, and `Gulp` throughout the training.  It is important to be comfortable using the command line as it should be part of any daily Front End development workflow.
-
-### Composer
-Composer (https://getcomposer.org/) is a dependency manager for PHP that allows us to perform a multitude of tasks; everything from creating a Drupal project to declaring libraries and even installing contributed modules. The advantage of using Composer is that it allows us to quickly install and update dependencies by simply running a few commands from a terminal window.
-
-`LANDO` will allow us to run these commands without the need to physically install `Composer` on our computer or laptop.  We will revisit the various `Composer` commands that will be used later during the training.
-
-### Node & NPM
-[Node](https://nodejs.org/en/) is a cross platform runtime environment for creating server side and networking applications. JavaScript running outside the browser. [NPM](https://www.npmjs.com/) is the package manager for JavaScript used to install, share, and distribute code and is used to manage dependencies in projects.
-
-> We will be using NPM to manage dependencies when working with themes in Drupal 9.
-
-`DDEV` will allow us to run these commands without the need to physically install `NPM` on our computer or laptop.  We will revisit the various `NPM` commands that will be used later during the training.
-
-### Gulp
-[Gulp](https://gulpjs.com/) is a JavaScript task runner that allows us to perform repetitive tasks like minification, compilation, unit testing, linting and more. We use `Gulp` to compile Sass, Pattern Lab and watch for file changes during development.
-
-`DDEV` will allow us to run these commands without the need to physically install `Gulp` on our computer or laptop.  We will revisit the various `Gulp` commands that will be used later during the training.
-
-## Using the training files and configuring Drupal
-
 ### Downloading the training files
-Now that we have all the necessary requirements out of the way we can proceed by either downloading a copy of the training files located within the `Develop` branch or if we are familiar with `Git` we may choose to clone the branch to our computer.
+Now that we have all the necessary requirements out of the way we can proceed by downloading a copy of the training files located within the `develop-lando` branch.
 
 ### Downloading the repo
 Begin by locating the green `Code` drop-down button at the top of the page and choose **Download ZIP**.  Locate the zipped file named `components-develop.zip` and extract it's contents. Make sure to rename the `components-develop` folder to `components`.
 
 > For sake of training, we will be copying this folder to a new directory called **Training**.
 
-### Cloning the repo
-If you prefer to clone the repository to your computer using `Git`, we can do so by locating the green `Code` drop-down button, selecting the `HTTPS` option and copying the path to our clipboard for use by running the following command in our terminal window.
+Now that we have a copy of the training files on our local computer it is time to use `Lando` to create our Drupal 9 instance along with installing our theme and any dependencies it may need.  In order to do so we need to make sure we have `Docker` and `Lando` installed on our computers.
 
-```
-  cd training
-  git clone https://github.com/chazchumley/components.git
-```
+> Note: We will only have to perform this install once.  We will be able to use both Docker and Lando for future projects.
 
-If you have chosen to clone the repository please make sure to remove the `git origin remote` as we will not be pushing any updates back up to the repository.  You can do this by entering the following command in our terminal window.
+### Docker / LANDO
+To eliminate the need for various setups that may involve different **AMP** (Apache/MySQL/PHP) stacks we have chosen to use `LANDO` a Docker based development environment to work with PHP, MySQL and Drupal.  Prior to installing `LANDO` we can verify the system requirements by navigating to the [System Requirements](https://docs.lando.dev/basics/installation.html#system-requirements) page and following the directions for our operating system.
 
-```
-  cd training/components
-  git remote remove origin
-```
+Once we have verified and/or met the System Requirements for `Lando`, we can move on to the installation steps based on our operating system.
 
-Now that we have a copy of the training files on our local computer it is time to use `DDEV` to create our Drupal 9 instance along with installing our theme and any dependencies it may need.  In order to do so we need to make sure we have `Docker` and `DDEV` installed on our computers.
-
-> Note: We will only have to perform this install once.  We will be able to use both Docker and DDEV for future projects.
-
-### Docker / DDEV
-To eliminate the need for various setups that may involve different **AMP** (Apache/MySQL/PHP) stacks we have chosen to use `DDEV` a Docker based development environment to work with PHP, MySQL and Drupal.  Prior to installing `DDEV` we can verify the system requirements by navigating to the [System Requirements](https://ddev.readthedocs.io/en/stable/#system-requirements) page and following the directions for our operating system.
-
-Once we have verified and/or met the System Requirements for DDEV, we can move on to the [Installation](https://ddev.readthedocs.io/en/stable/#installation) steps based on our operating system.
-
-Once completed we will revisit how to use DDEV to import a Drupal 9 website as well as how to start a server, run composer, drush and import the initial database snapshot that will be used throughout the training.
+Once completed we will revisit how to use `Lando` to import a Drupal 9 website as well as how to start a server, run composer, drush and import the initial database snapshot that will be used throughout the training.
 
 ### Setup
-The initial setup of DDEV requires a configuration file which we have already provided located in the `.ddev` folder of the project.  In order to initialize the Docker containers needed by DDEV we will need to execure the following commands within the terminal window.
+The initial setup of `Lando` requires a configuration file which we have already provided located in the root folder of the project.  In order to initialize the Docker containers needed by `Lando` we will need to execute the following commands within the terminal window.
 
 ```
-  ddev start
+  lando start
 ```
 
-> Note: If this is the first time ever starting DDEV, we may be prompted to send anonymous usage statisitics and errors.  This is completely up to you to opt in or opt out.
+Once `Lando` finishes spinning up the containers we will need to scaffold up our Drupal 9 instance by running the following composer  command.
 
-Once DDEV finishes spinning up the containers it will automatically scaffold up our Drupal 9 instance by running the composer install command.
+```
+  lando composer install
+```
 
 > Note: anytime we need to install, remove or update modules or depedencies DDEV requires the `ddev` prefix in order to execute these commands within the terminal window.
 
