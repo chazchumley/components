@@ -26,6 +26,7 @@ Once completed we will revisit how to use DDEV to import a Drupal 9 website as w
 The initial setup of DDEV requires a configuration file which we have already provided located in the `.ddev` folder of the project.  In order to initialize the Docker containers needed by DDEV we will need to execure the following commands within the terminal window.
 
 ```
+  cd training/components
   ddev start
 ```
 
